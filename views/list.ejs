@@ -1,0 +1,17 @@
+<%- include("header"); -%>
+    <div class="header">
+        <h1><%=kinday%></h1>
+    </div>
+    <div class="box">
+        <ul>
+            <%for(var a = 0;a<newListItem.length;a++){%>
+            <li><input type="checkbox" name="ticker" id="tick"><span> <%=newListItem[a]%></span></li>
+            <%}%>
+        </ul>
+        <form action="/" method="post">
+        <input class="inp" type="text" name="nItem" id="newItem" placeholder="New Item" autocomplete="off" maxlength="30" autofocus required="true">
+        <button type="submit" name="list" value=<%=kinday%>>+</button>
+        </form>
+    </div>
+<%- include("footer"); -%>
+    
